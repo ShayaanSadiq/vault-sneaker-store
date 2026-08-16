@@ -2,7 +2,7 @@
 
 A responsive sneaker shop with an HTML, CSS, and JavaScript storefront and a Java Spring Boot API.
 
-## What you need on Windows
+## Prerequisites
 
 - Java 21
 - Apache Maven
