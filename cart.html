@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop Sneakers — VAULT</title>
+    <title>Your Bag — VAULT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,14 +12,14 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body data-page="shop">
+  <body data-page="cart">
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">VAULT<span>.</span></a>
         <nav class="site-nav" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="products.html" class="is-active">Shop</a>
-          <a href="cart.html">Cart</a>
+          <a href="products.html">Shop</a>
+          <a href="cart.html" class="is-active">Cart</a>
         </nav>
         <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
@@ -27,30 +27,15 @@
 
     <main class="container">
       <section class="page-hero">
-        <p class="kicker">Catalog</p>
-        <h1>ALL SNEAKERS</h1>
-        <p class="lede">Browse the wall and filter by category or price.</p>
+        <p class="kicker">Bag</p>
+        <h1>YOUR CART</h1>
       </section>
-
-      <div class="toolbar">
-        <input id="search" type="search" placeholder="Search Apex, Dunk, Knit..." />
-        <select id="category">
-          <option value="all">All categories</option>
-          <option value="Running">Running</option>
-          <option value="Basketball">Basketball</option>
-          <option value="Lifestyle">Lifestyle</option>
-          <option value="Limited">Limited</option>
-        </select>
-        <select id="sort">
-          <option value="featured">Featured</option>
-          <option value="price-asc">Price: low to high</option>
-          <option value="price-desc">Price: high to low</option>
-          <option value="name">Name A–Z</option>
-        </select>
+      <div class="empty-state">
+        <p class="kicker">Empty bag</p>
+        <h2>Nothing in the vault yet.</h2>
+        <p>Grab a pair from the shop and it will show up here.</p>
+        <p><a class="btn btn-accent" href="products.html">Shop sneakers</a></p>
       </div>
-
-      <p class="category-tag" id="result-count"></p>
-      <div class="product-grid" id="product-grid"></div>
     </main>
 
     <footer class="site-footer">
@@ -60,8 +45,6 @@
       </div>
     </footer>
 
-    <script src="js/data.js"></script>
     <script src="js/ui.js"></script>
-    <script src="js/products.js"></script>
   </body>
 </html>
