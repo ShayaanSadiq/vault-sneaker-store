@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment — VAULT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="pay">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">VAULT<span>.</span></a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="products.html">Shop</a>
+          <a href="cart.html">Cart</a>
+          <a href="payment.html" class="is-active">Payment</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <div class="header-actions">
+          <a class="cart-link" href="cart.html">
+            Bag
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" id="payment-root">
+      <section class="page-hero">
+        <p class="kicker">Checkout</p>
+        <h1>PAYMENT</h1>
+        <p class="lede">Enter shipping and card details. This is a demo checkout — nothing is charged.</p>
+      </section>
+
+      <div class="pay-layout">
+        <form class="form-card" id="payment-form" novalidate>
+          <h2>Shipping details</h2>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" autocomplete="name" required />
+              <span class="error" data-error="fullName"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <span class="error" data-error="email"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              <span class="error" data-error="phone"></span>
+            </div>
+            <div class="field full">
+              <label for="address">Street address</label>
+              <input id="address" name="address" autocomplete="street-address" required />
+              <span class="error" data-error="address"></span>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" name="city" autocomplete="address-level2" required />
+              <span class="error" data-error="city"></span>
+            </div>
+            <div class="field">
+              <label for="zip">ZIP / Postal code</label>
+              <input id="zip" name="zip" autocomplete="postal-code" required />
+              <span class="error" data-error="zip"></span>
+            </div>
+          </div>
+
+          <h2>Card details</h2>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="cardName">Name on card</label>
+              <input id="cardName" name="cardName" autocomplete="cc-name" required />
+              <span class="error" data-error="cardName"></span>
+            </div>
+            <div class="field full">
+              <label for="cardNumber">Card number</label>
+              <input
+                id="cardNumber"
+                name="cardNumber"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                placeholder="ACCT-000015"
+                maxlength="19"
+                required
+              />
+              <span class="error" data-error="cardNumber"></span>
+            </div>
+            <div class="field">
+              <label for="expiry">Expiry (MM/YY)</label>
+              <input
+                id="expiry"
+                name="expiry"
+                inputmode="numeric"
+                autocomplete="cc-exp"
+                placeholder="08/28"
+                maxlength="5"
+                required
+              />
+              <span class="error" data-error="expiry"></span>
+            </div>
+            <div class="field">
+              <label for="cvv">CVV</label>
+              <input id="cvv" name="cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required />
+              <span class="error" data-error="cvv"></span>
+            </div>
+            <div class="field full">
+              <label class="checkbox">
+                <input id="terms" name="terms" type="checkbox" />
+                <span>I confirm these details are correct and this is a demo payment.</span>
+              </label>
+              <span class="error" data-error="terms"></span>
+            </div>
+          </div>
+          <button class="btn btn-accent btn-full" type="submit">Pay now</button>
+        </form>
+
+        <aside class="summary-card" id="order-summary"></aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="logo">VAULT<span>.</span></div>
+        <p class="copyright">© 2026 VAULT Sneaker Co.</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

@@ -60,6 +60,7 @@ function renderCart() {
         <div class="summary-row"><span>Shipping</span><span>${formatCurrency(totals.shipping)}</span></div>
         <div class="summary-row"><span>Tax</span><span>${formatCurrency(totals.tax)}</span></div>
         <div class="summary-row total"><span>Total</span><span>${formatCurrency(totals.total)}</span></div>
+        <p><a class="btn btn-accent btn-full" href="payment.html">Continue to payment</a></p>
         <p><a class="btn btn-ghost btn-full" href="products.html">Keep shopping</a></p>
       </aside>
     </div>
