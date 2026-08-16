@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VAULT Sneaker Store</title>
+    <title>VAULT — Premium Sneaker Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,24 +12,68 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="index.html">VAULT<span>.</span></a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html" class="is-active">Home</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
       </div>
     </header>
-    <main class="container">
-      <section class="page-hero">
-        <p class="kicker">Sneaker store</p>
-        <h1>VAULT</h1>
-        <p class="lede">Shop running, basketball, and lifestyle sneakers.</p>
+
+    <main>
+      <section class="container hero">
+        <div>
+          <p class="kicker">Spring / Summer drop</p>
+          <h1>THE CITY<br />WALKS IN<br />VAULT.</h1>
+          <p class="lede">
+            Limited sneakers, honest materials, and drops that actually land.
+            Running, court, and lifestyle pairs without the resale circus.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80"
+            alt="Infrared runner sneaker on a studio backdrop"
+          />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Categories</h2>
+          </div>
+          <div class="categories">
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80')">
+              <span>01</span>
+              <strong>Running</strong>
+            </div>
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80')">
+              <span>02</span>
+              <strong>Basketball</strong>
+            </div>
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80')">
+              <span>03</span>
+              <strong>Lifestyle</strong>
+            </div>
+            <div class="category-card" style="background-image: url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80')">
+              <span>04</span>
+              <strong>Limited</strong>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <div class="container">
         <div class="logo">VAULT<span>.</span></div>
         <p class="copyright">© 2026 VAULT Sneaker Co.</p>
       </div>
     </footer>
+    <script src="js/ui.js"></script>
   </body>
 </html>
