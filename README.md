@@ -35,19 +35,9 @@ Keep that window open while you use the shop.
 
 ## Run the storefront
 
-The easiest option on Windows is to open `index.html` in your browser:
-
 1. Open the project folder in File Explorer.
 2. Double-click `index.html`.
 3. If Windows asks how to open it, choose Microsoft Edge or Chrome.
-
-If you want to serve the folder over HTTP instead, and Python is installed, run this in Command Prompt from the project folder:
-
-```bat
-py -m http.server 5500
-```
-
-Then open `http://localhost:5500` in your browser.
 
 The shop loads products from the API when it is running, and uses the local catalog otherwise.
 
