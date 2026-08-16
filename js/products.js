@@ -15,7 +15,9 @@ function applyFilters() {
 
   document.getElementById("result-count").textContent =
     `${items.length} pair${items.length === 1 ? "" : "s"} on the wall`;
-  document.getElementById("product-grid").innerHTML = items.map(productCard).join("");
+  const grid = document.getElementById("product-grid");
+  grid.innerHTML = items.map(productCard).join("");
+  bindAddToCart(grid);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

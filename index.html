@@ -22,6 +22,12 @@
           <a href="cart.html">Cart</a>
         </nav>
         <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <div class="header-actions">
+          <a class="cart-link" href="cart.html">
+            Bag
+            <span class="cart-count" data-cart-count hidden>0</span>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -79,6 +85,9 @@
         <p class="copyright">© 2026 VAULT Sneaker Co.</p>
       </div>
     </footer>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/ui.js"></script>
   </body>
 </html>
