@@ -159,6 +159,29 @@ function showSuccess(orderId, total) {
   `;
 }
 
+function checkoutPayload() {
+  const cart = getCart();
+  return {
+    fullName: document.getElementById("fullName").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    address: document.getElementById("address").value.trim(),
+    city: document.getElementById("city").value.trim(),
+    zip: document.getElementById("zip").value.trim(),
+    items: cart.map((item) => ({
+      productId: item.id,
+      size: item.size,
+      quantity: item.quantity,
+    })),
+    payment: {
+      cardName: document.getElementById("cardName").value.trim(),
+      cardNumber: document.getElementById("cardNumber").value,
+      expiry: document.getElementById("expiry").value.trim(),
+      cvv: document.getElementById("cvv").value.trim(),
+    },
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderSummary();
 
@@ -175,10 +198,19 @@ document.addEventListener("DOMContentLoaded", () => {
     expiry.value = raw.length > 2 ? `${raw.slice(0, 2)}/${raw.slice(2)}` : raw;
   });
 
-  document.getElementById("payment-form").addEventListener("submit", (event) => {
+  document.getElementById("payment-form").addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!getCart().length) return;
     if (!validate()) return;
-    showSuccess(`VLT-${Date.now().toString().slice(-8)}`, formatCurrency(orderTotals().total));
+
+    const submit = event.target.querySelector("button[type=submit]");
+    submit.disabled = true;
+    try {
+      const order = await createOrder(checkoutPayload());
+      showSuccess(order.id, formatCurrency(order.total));
+    } catch (error) {
+      submit.disabled = false;
+      setError("terms", error.message);
+    }
   });
 });

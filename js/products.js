@@ -20,7 +20,7 @@ function applyFilters() {
   bindAddToCart(grid);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const search = document.getElementById("search");
   const category = document.getElementById("category");
   const sort = document.getElementById("sort");
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     category.value = preset;
   }
 
+  await loadCatalog();
   [search, category, sort].forEach((el) => el.addEventListener("input", applyFilters));
   applyFilters();
 });
