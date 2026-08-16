@@ -6,6 +6,8 @@ A responsive sneaker shop with an HTML, CSS, and JavaScript storefront and a Jav
 
 - Java 21
 - Apache Maven
+- Visual Studio Code (or Cursor)
+- The **Live Server** extension by Ritwick Dey
 - Microsoft Edge, Chrome, or Firefox
 
 ## Pages
@@ -35,9 +37,14 @@ Keep that window open while you use the shop.
 
 ## Run the storefront
 
-1. Open the project folder in File Explorer.
-2. Double-click `index.html`.
-3. If Windows asks how to open it, choose Microsoft Edge or Chrome.
+Use Live Server in VS Code (or Cursor) so the pages run over HTTP:
+
+1. Open this project folder in VS Code.
+2. Install **Live Server** from the Extensions view if it is not already installed (`Ctrl+Shift+X`, search for Live Server).
+3. Right-click `index.html` in the Explorer.
+4. Choose **Open with Live Server**.
+
+The site usually opens at `http://127.0.0.1:5500`. Keep Live Server running while you browse Home, Shop, Cart, and Payment.
 
 The shop loads products from the API when it is running, and uses the local catalog otherwise.
 
