@@ -28,8 +28,27 @@
       <section class="page-hero">
         <p class="kicker">Catalog</p>
         <h1>ALL SNEAKERS</h1>
-        <p class="lede">Browse the wall of current pairs.</p>
+        <p class="lede">Browse the wall and filter by category or price.</p>
       </section>
+
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search Apex, Dunk, Knit..." />
+        <select id="category">
+          <option value="all">All categories</option>
+          <option value="Running">Running</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Lifestyle">Lifestyle</option>
+          <option value="Limited">Limited</option>
+        </select>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+
+      <p class="category-tag" id="result-count"></p>
       <div class="product-grid" id="product-grid"></div>
     </main>
 
