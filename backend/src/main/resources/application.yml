@@ -1,6 +1,18 @@
 spring:
   application:
     name: vault-store
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:vault;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    driver-class-name: org.h2.Driver
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: ${H2_CONSOLE_ENABLED:true}
 
 server:
   port: ${SERVER_PORT:8080}
