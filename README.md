@@ -38,7 +38,3 @@ Keep that window open while you use the shop.
 Open `frontend/index.html` in your browser.
 
 The shop loads products from the API when it is running, and uses the local catalog otherwise.
-
-## Demo card
-
-Use `4242 4242 4242 4242` with any future expiry and a 3-digit CVV. Nothing is charged, and card numbers are not stored.
